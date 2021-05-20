@@ -40,6 +40,8 @@ services:
       - 3000:3000
     networks:
       - grafana
+    volumes: 
+      - ${PWD}/grafana-plugins:/var/lib/grafana/plugins
 
   app:
     build: ./app
